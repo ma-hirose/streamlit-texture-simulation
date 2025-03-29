@@ -7,11 +7,11 @@ import tempfile
 
 # 初回実行時にsession_stateにカメラ眼位置を設定（必要なら他のパラメータも）
 if 'camera_eye_x' not in st.session_state:
-    st.session_state.camera_eye_x = -1.5
+    st.session_state.camera_eye_x = -1.2
 if 'camera_eye_y' not in st.session_state:
-    st.session_state.camera_eye_y = -1.5
+    st.session_state.camera_eye_y = -1.2
 if 'camera_eye_z' not in st.session_state:
-    st.session_state.camera_eye_z = 1.5
+    st.session_state.camera_eye_z = 1.2
 
 st.title("Texture Simulation with Streamlit")
 st.markdown("")
@@ -27,7 +27,7 @@ if uploaded_file is not None:
         stl_filepath = tmp.name
     st.sidebar.success("Success！")
 else:
-    stl_filepath = '3200_output.stl'
+    stl_filepath = 'sample.stl'
     # st.sidebar.info("If there is no upload, use [3200_output.stl] as a default.")
 
 # STL file reading
